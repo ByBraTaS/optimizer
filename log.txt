@@ -1,0 +1,117 @@
+[17:42:50] INFO e.u.e.g.__RNAME__.Main     : Starting Main using Java 17 on LAPTOP-BJL2HS8M with PID 13200 (C:\Users\Javie\Downloads\content\content\template\target\classes started by Javie in C:\Users\Javie\Downloads\content\content)
+[17:42:50] INFO e.u.e.g.__RNAME__.Main     : No active profile set, falling back to default profiles: default
+[17:42:52] INFO e$BeanPostProcessorChecker : Bean 'eventAsyncConfigurer' of type [es.urjc.etsii.grafo.solver.services.events.EventAsyncConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[17:42:53] INFO .s.b.w.e.t.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+[17:42:53] INFO o.a.c.c.StandardService    : Starting service [Tomcat]
+[17:42:53] INFO o.a.c.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+[17:42:54] INFO o.a.c.c.C.[.[.[/]          : Initializing Spring embedded WebApplicationContext
+[17:42:54] INFO ebServerApplicationContext : Root WebApplicationContext: initialization completed in 3700 ms
+[17:42:54] WARN e.u.e.g.p.PatchCollections : Failed to patch Collections.shuffle(), internal random is not accessible. Probably missing opens, see: https://mork-optimization.readthedocs.io/en/latest/quickstart/troubleshooting/
+
+java.lang.reflect.InaccessibleObjectException: Unable to make field private static java.util.Random java.util.Collections.r accessible: module java.base does not "opens java.util" to unnamed module @b7dd107
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[na:na]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178) ~[na:na]
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172) ~[na:na]
+	at es.urjc.etsii.grafo.patches.PatchCollections.patch(PatchCollections.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.1.jar:2.6.1]
+	at es.urjc.etsii.grafo.solver.Mork.start(Mork.java:27) ~[classes/:na]
+	at es.urjc.etsii.grafo.__RNAME__.Main.main(Main.java:7) ~[classes/:na]
+
+[17:42:54] INFO e.u.e.g.p.PatchCollections : Collections.shuffle() patched successfully
+[17:42:54] WARN e.u.e.g.p.PatchMathRandom  : Failed to patch Collections.shuffle(), internal random is not accessible. Probably missing opens, see: https://mork-optimization.readthedocs.io/en/latest/quickstart/troubleshooting/
+
+java.lang.reflect.InaccessibleObjectException: Unable to make field static final java.util.Random java.lang.Math$RandomNumberGeneratorHolder.randomNumberGenerator accessible: module java.base does not "opens java.lang" to unnamed module @b7dd107
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[na:na]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:178) ~[na:na]
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:172) ~[na:na]
+	at es.urjc.etsii.grafo.patches.PatchMathRandom.patch(PatchMathRandom.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.1.jar:2.6.1]
+	at es.urjc.etsii.grafo.solver.Mork.start(Mork.java:27) ~[classes/:na]
+	at es.urjc.etsii.grafo.__RNAME__.Main.main(Main.java:7) ~[classes/:na]
+
+[17:42:54] INFO e.u.e.g.p.PatchMathRandom  : Math.random() patched successfully
+[17:42:54] INFO c.u.e.g.s.s.IOManager      : Using solution serializers: [es.urjc.etsii.grafo.io.serializers.json.DefaultJSONSolutionSerializer@32177fa5]
+[17:42:54] INFO e.u.e.g.s.s.Orchestrator   : Using SolutionBuilder implementation: ReflectiveSolutionBuilder
+[17:42:54] WARN e.u.e.g.s.e.Executor       : No SolutionValidator implementation has been found, solution CORRECTNESS WILL NOT BE CHECKED
+[17:42:55] INFO .WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+[17:42:55] INFO .s.b.w.e.t.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+[17:42:55] INFO SimpleBrokerMessageHandler : Starting...
+[17:42:55] INFO SimpleBrokerMessageHandler : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3596b249]]
+[17:42:55] INFO SimpleBrokerMessageHandler : Started.
+[17:42:55] INFO e.u.e.g.__RNAME__.Main     : Started Main in 7.06 seconds (JVM running for 9.22)
+[17:42:55] INFO c.u.e.g.s.s.Orchestrator   : Skipping CPU benchmark
+[17:42:55] INFO c.u.e.g.s.s.Orchestrator   : App started, ready to start solving!
+[17:42:55] INFO c.u.e.g.s.s.Orchestrator   : Experiments to execute: [ConstructiveExperiment]
+[17:42:55] INFO c.u.e.g.s.s.Orchestrator   : Running experiment: ConstructiveExperiment
+[17:42:55] INFO .u.e.g.s.s.InstanceManager : Loading all instances to check correctness...
+[17:42:55] INFO e.g.s.e.ConcurrentExecutor : Shutdown executor
+[17:42:55] INFO c.u.e.g.s.s.Orchestrator   : Total execution time: 0 (s)
+[17:42:55] INFO ationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[17:42:55] ERROR o.s.b.SpringApplication    : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:770) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:751) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-2.6.1.jar:2.6.1]
+	at es.urjc.etsii.grafo.solver.Mork.start(Mork.java:27) ~[classes/:na]
+	at es.urjc.etsii.grafo.__RNAME__.Main.main(Main.java:7) ~[classes/:na]
+Caused by: java.lang.IllegalArgumentException: Path does not exist or not a folder: C:\Users\Javie\Downloads\content\content\instances
+	at es.urjc.etsii.grafo.util.IOUtil.checkExists(IOUtil.java:41) ~[classes/:na]
+	at es.urjc.etsii.grafo.solver.services.InstanceManager.getInstanceSolveOrder(InstanceManager.java:57) ~[classes/:na]
+	at es.urjc.etsii.grafo.solver.services.Orchestrator.experimentWrapper(Orchestrator.java:98) ~[classes/:na]
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:647) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092) ~[na:na]
+	at es.urjc.etsii.grafo.solver.services.Orchestrator.run(Orchestrator.java:84) ~[classes/:na]
+	at es.urjc.etsii.grafo.solver.RunOnStart.run(RunOnStart.java:20) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:767) ~[spring-boot-2.6.1.jar:2.6.1]
+	... 4 common frames omitted
+
+[17:42:55] INFO SimpleBrokerMessageHandler : Stopping...
+[17:42:55] INFO SimpleBrokerMessageHandler : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3596b249]]
+[17:42:55] INFO SimpleBrokerMessageHandler : Stopped.
